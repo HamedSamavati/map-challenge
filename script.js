@@ -53,3 +53,4 @@ let customers = [
     purchased: ["Toys"],
   },
 ];
+console.log("ok");
