@@ -54,27 +54,28 @@ const customers = [
   },
 ];
 
-// Challenge 1. Find customers with age>60 and age<10
+//  Challenge 1. Find customers with age>60 and age<10
 
-const filteredCustomers = customers.filter((customer) => {
-  return customer.age > 60 || customer.age < 10;
-});
-// console.log(filteredCustomers);
+const filteredCustomers = customers.filter(
+  (customer) => customer.age > 60 || customer.age < 10
+);
+console.log(filteredCustomers);
 
 // Challenge 2. Build customer data with title and full name
 
-const titledCustomers = customers.map((customer) => {
-  title = "";
-  if (customer.gender === "M") {
+const titledCustomer = customers.map((customer) => {
+  let title = "";
+  const gender = customer.gender;
+  if (gender == "M") {
     title += "Mr.";
-  } else if (customer.gender === "F") {
-    if (customer.married === true) {
+  } else if (gender == "F") {
+    if (customer.married == true) {
       title += "Mis.";
     } else {
       title += "Miss";
     }
   }
-  customer.title = title + " " + customer.f_name + " " + customer.l_name;
-  return filteredCustomers;
+  customer.title = `${title} ${customer.f_name} ${customer.l_name}`;
+  return customer;
 });
-// console.log(titledCustomers);
+console.log(titledCustomer);
