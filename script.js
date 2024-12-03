@@ -1,7 +1,7 @@
 // Challenge 1. Find customers with age>60 and age<10
 // Challenge 2. Build customer data with title and full name
 
-let customers = [
+const customers = [
   {
     id: 1,
     f_name: "Abby",
@@ -53,4 +53,4 @@ let customers = [
     purchased: ["Toys"],
   },
 ];
-console.log("ok");
+newArr = [];
